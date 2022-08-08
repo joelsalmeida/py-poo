@@ -17,3 +17,12 @@ def test_turn_up_volume():
     for i in range(50):
         tv.turn_up_volume()
     assert tv.volume == 99
+
+
+def test_turn_down_volume():
+    tv.turn_down_volume()
+    assert tv.volume == 98
+
+    for i in range(100):
+        tv.turn_down_volume()
+    assert tv.volume == 0
