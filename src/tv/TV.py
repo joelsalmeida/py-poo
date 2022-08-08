@@ -9,10 +9,6 @@ class TV:
     def volume(self):
         return self.__volume
 
-    @volume.setter
-    def volume(self, new_volume):
-        self.__volume = new_volume
-
     @property
     def chanel(self):
         return self.__volume
@@ -32,3 +28,7 @@ class TV:
     @on.setter
     def on(self, on_status):
         self.__on = on_status
+
+    def turn_up_volume(self):
+        if self.__volume < 99:
+            self.__volume = self.__volume + 1
