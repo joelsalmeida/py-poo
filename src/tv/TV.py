@@ -11,11 +11,7 @@ class TV:
 
     @property
     def chanel(self):
-        return self.__volume
-
-    @chanel.setter
-    def chanel(self, new_chanel):
-        self.__chanel = new_chanel
+        return self.__chanel
 
     @property
     def screen_size(self):
@@ -36,3 +32,9 @@ class TV:
     def turn_down_volume(self):
         if self.__volume > 0:
             self.__volume -= 1
+
+    def change_chanel(self, chanel):
+        if chanel > 99 or chanel < 0:
+            raise ValueError('Invalid chanel')
+
+        self.__chanel = chanel
